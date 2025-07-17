@@ -1,0 +1,344 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* ====== HEADER ====== */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 24px;
+}
+
+.back-button {
+    position: absolute;
+    left: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* ====== ESTILO PRODUCTOS ====== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+/* ====== ESTILOS PARA PRECIO ====== */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ====== ESTILOS WHATSAPP ====== */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ====== MODAL ====== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ====== GALERÍA DE IMÁGENES ====== */
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.image-gallery img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ====== CENTRAR TÍTULOS ====== */
+.center-title {
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+/* ====== DESCRIPCIÓN DEL PRODUCTO ====== */
+.product-description {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 20px;
+}
+
+/* ====== CARRITO ====== */
+.carrito-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.carrito-nombre {
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.carrito-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carrito-cantidad button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carrito-cantidad button:hover {
+    background-color: #0056b3;
+}
+
+/* ====== BOTÓN COMPRAR ====== */
+.comprar-btn {
+    display: block; /* Asegura que el botón se comporte como un bloque */
+    width: auto; /* Se ajusta al contenido */
+    max-width: 300px; /* Ancho máximo */
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+    border-radius: 5px;
+}
+
+.comprar-btn:hover {
+    background-color: #218838;
+}
+
+/* ====== MEJORAS PARA `compra.html` ====== */
+.small-img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Contenedor con fondo blanco y centrado */
+body[data-page="compra"] .product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Ajusta el tamaño según necesites */
+    margin: 30px auto;
+}
+
+/* Imagen más pequeña */
+body[data-page="compra"] .product-image img {
+    max-width: 250px; /* Ajusta el tamaño según necesites */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botón de "Agregar al Carrito" con mejor diseño */
+.agregar-btn {
+    display: block;
+    width: 100%;
+    background-color: #ff5722;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+.confirmacion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 10; /*asegura q este encima de los productos*/
+}
+
+.confirmacion button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Asegúrate de que el contenedor de los productos tenga posicionamiento relativo */
+#carrito-lista {
+    position: relative;
+}
+
+/* Estilos del botón */
+.vaciar-carrito-btn {
+    position: absolute;
+    top: 70px; /* Distancia desde el borde superior */
+    right: 10px; /* Distancia desde el borde derecho */
+    padding: 2px 4px; /* Tamaño reducido del botón */
+    background-color: #f44336; /* Color de fondo */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño del texto reducido */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+.vaciar-carrito-btn:hover {
+    background-color: #d32f2f; /* Color de fondo más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de "subir" al pasar el mouse */
+}
+
+.vaciar-carrito-btn:active {
+    transform: translateY(1px); /* Efecto de "presionar" al hacer clic */
+}
+
+.agregar-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Ajuste en el número del carrito */
+.carrito-cantidad span {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* ====== AJUSTES PARA RESPONSIVE ====== */
+@media screen and (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .back-button {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}

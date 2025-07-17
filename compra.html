@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Producto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    
+    <body data-page="compra">
+
+    <header>
+        <a href="javascript:void(0);" class="back-button" onclick="volverAtras()">⬅ Volver</a>
+        <h1 class="center-title"> PIPI INDUMENTARIA </h1>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-image">
+                <img id="compra-imagen" src="" alt="Producto Seleccionado">
+            </div>
+            <div class="product-info">
+                <h2 id="compra-title">Cargando...</h2>              
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" min="1" value="1">
+
+                <button class="agregar-btn" onclick="agregarAlCarrito()">🛒 Agregar al Carrito</button>
+            </div>
+        </div>
+    </main>
+
+    <a href="carrito.html" class="whatsapp-button">🛍 Ver Carrito</a>
+
+</body>
+</html>

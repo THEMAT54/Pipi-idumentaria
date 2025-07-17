@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-button">⬅ Volver</a>
+        <h1 class="center-title">Carrito de Compras</h1>
+    </header>
+
+    <main>
+        
+        <button id="vaciar-carrito-btn" class="vaciar-carrito-btn">Vaciar Carrito</button>
+<div id="confirmacion-vaciar" class="confirmacion oculto">
+    <p>¿Seguro que quieres eliminar todos los productos?</p>
+    <button onclick="confirmarVaciarCarrito(true)">Sí</button>
+    <button onclick="confirmarVaciarCarrito(false)">No</button>
+</div>
+        <div id="carrito-lista" class="carrito-lista"></div> <!-- Aquí se mostrarán los productos -->
+
+        <button class="comprar-btn">Comprar</button>
+    </main>
+
+</body>
+</html>
